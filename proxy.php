@@ -27,7 +27,7 @@ $whiteListURLs = array(
 
 try {
 
-	$proxy = new Proxy(array( 'url'=>$_SERVER['QUERY_STRING'], 'whiteList'=>$whiteListURLs, 'sendCookies'=>true )  );
+	$proxy = new Proxy(array( 'url' => $_SERVER['QUERY_STRING'], 'whiteList'=>$whiteListURLs, 'sendCookies'=>true )  );
 
 	if($proxy->getContentFromServer())
 	{
@@ -36,7 +36,7 @@ try {
 	}
 	else
 	{
-		throw new Exception("Not content from server", 1);
+		throw new Exception("Content server error", 1);
 	}
 
 }
