@@ -42,9 +42,8 @@ try {
 }
 catch (Exception $e) 
 {
-	echo $e->getMessage();
-
 	header('HTTP/1.0 502 Bad Gateway;');
+	echo $e->getMessage();
 	exit(1);
 }
 
